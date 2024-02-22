@@ -4,7 +4,11 @@ runs:
   using: "composite"
   steps:
     - name: Installing npm dependencies
+      shell: bash
       run: npm i
     - run: npm run lint
+      shell: bash
     - run: npm run test
+      shell: bash
     - run: npm run test-behavior
+      shell: bash

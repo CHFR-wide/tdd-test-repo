@@ -1,5 +1,5 @@
 name: GitHub Test And Lint
-run-name: ${{ github.actor }} Is doing testing and linting on the project
+run-name: ${{ github.actor }} is doing testing and linting on the project
 on: [push]
 jobs:
   Lint-And-Test:
