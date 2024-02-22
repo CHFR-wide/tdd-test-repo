@@ -3,8 +3,14 @@ run-name: ${{ github.actor }} Is doing testing and linting on the project
 on: [push]
 jobs:
   Lint-And-Test:
-    runs-on: node:18-alpine
+    runs-on: ubuntu-latest
     steps:
+      - name: installing node 18 PPA
+        run: curl -s https://deb.nodesource.com/setup_18.x | bash
+      - name: updating package manager
+        run: apt update
+      - name: installing nodejs
+        run: apt install nodejs -y
       - name: Installing npm dependencies
         run: npm i
       - run: npm run lint
