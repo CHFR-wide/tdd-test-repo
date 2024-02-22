@@ -5,12 +5,10 @@ jobs:
   Lint-And-Test:
     runs-on: ubuntu-latest
     steps:
-      - name: installing node 18 PPA
-        run: curl -s https://deb.nodesource.com/setup_18.x | sudo bash
-      - name: updating package manager
-        run: sudo apt update
-      - name: installing nodejs
-        run: sudo apt install nodejs -y
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
       - name: Installing npm dependencies
         run: npm i
       - run: npm run lint
