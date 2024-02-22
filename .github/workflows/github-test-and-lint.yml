@@ -1,6 +1,10 @@
 name: GitHub Test And Lint
 run-name: ${{ github.actor }} is doing testing and linting on the project
-on: [push]
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
 jobs:
   Lint-And-Test:
     runs-on: ubuntu-latest
