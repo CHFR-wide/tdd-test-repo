@@ -1,0 +1,18 @@
+name: GitHub Test And Lint
+run-name: ${{ github.actor }} is doing testing and linting on the project
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
+jobs:
+  Lint-And-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Use local test all action
+        uses: ./.github/actions/install-and-test
+      - run: echo "All OK"
