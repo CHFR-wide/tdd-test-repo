@@ -1,0 +1,12 @@
+name: GitHub Test And Lint
+run-name: ${{ github.actor }} Is doing testing and linting on the project
+on: [push]
+jobs:
+  Lint-And-Test:
+    runs-on: node:18-alpine
+    steps:
+      - name: Installing npm dependencies
+        run: npm i
+      - run: npm run lint
+      - run: npm run test
+      - run: echo "All OK"
