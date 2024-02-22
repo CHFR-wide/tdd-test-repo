@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test-behavior": "cucumber-js features",
     "lint": "eslint src --ext .js",
     "lint-fix": "npm run lint -- --fix"
   },

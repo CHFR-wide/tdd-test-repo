@@ -1,5 +1,5 @@
 const { When, Then } = require('@cucumber/cucumber')
-const MyMath = require('../myMath')
+const MyMath = require('../src/myMath')
 const assert = require('assert')
 
 When('we add one and one together', () => {

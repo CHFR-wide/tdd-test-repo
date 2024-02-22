@@ -1,7 +1,7 @@
 const { When, Then, Given } = require('@cucumber/cucumber')
-const FunnyBank = require('../funnyBank')
+const FunnyBank = require('../src/funnyBank')
 const assert = require('assert')
-const { BANK_ERRS } = require('../bankErrors')
+const { BANK_ERRS } = require('../src/bankErrors')
 
 Given('Two existing bank accounts with enough funds', () => {
   this.bank = new FunnyBank()
