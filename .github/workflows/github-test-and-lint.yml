@@ -6,11 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: installing node 18 PPA
-        run: curl -s https://deb.nodesource.com/setup_18.x | bash
+        run: curl -s https://deb.nodesource.com/setup_18.x | sudo bash
       - name: updating package manager
-        run: apt update
+        run: sudo apt update
       - name: installing nodejs
-        run: apt install nodejs -y
+        run: sudo apt install nodejs -y
       - name: Installing npm dependencies
         run: npm i
       - run: npm run lint
