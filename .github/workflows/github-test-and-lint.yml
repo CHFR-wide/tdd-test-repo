@@ -9,9 +9,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: Installing npm dependencies
-        run: npm i
-      - run: npm run lint
-      - run: npm run test
-      - run: npm run test-behavior
+      - name: Use local test all action
+        uses: ./.github/actions/install-and-test
       - run: echo "All OK"

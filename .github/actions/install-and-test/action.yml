@@ -1,0 +1,10 @@
+name: 'Install and test all'
+description: 'Installs npm dev dependencies and executes linting, unit tests, and behavior tests'
+runs:
+  using: "composite"
+  steps:
+    - name: Installing npm dependencies
+      run: npm i
+    - run: npm run lint
+    - run: npm run test
+    - run: npm run test-behavior
